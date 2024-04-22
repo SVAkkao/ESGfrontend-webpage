@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+<!-- 使用hover 將所有的text-truncate造成的文字溢出...
+能夠被滑鼠移動而出現 -->
+    <style>
+        p[class^="text-truncate"]:hover{
+            white-space: nowrap;
+            overflow: visible;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站-Text</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/">https://getbootstrap.com/docs/5.2/utilities/text/</a>
+        </p>
+        <h4>官方網站-Text wrapping and overflow</h4>
+        <p><a
+                href="https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow">https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow</a>
+        </p>
+
+        <hr>
+
+        <!-- 10. 文字位置 -->
+
+        <p class="text-start">apple-1</p>
+        <p class="text-center">apple-2</p>
+        <p class="text-end bg-info">apple-3</p>
+
+        <!-- span元素改變不了位置 因為是行內元素
+        範圍太小 區塊與行內元素的差別 -->
+        <span class="text-end bg-info">ff</span>
+
+        <!-- 15. 在不同的螢幕寬度上，設定不同的對齊方式 -->
+        <!-- md 畫面寬度>=768px
+        text-end ==>元素靠右對齊
+    text-md-end 畫面寬度>=768時，元素靠右對齊 -->
+        <p class="text-sm-end">goose-1</p>
+        <p class="text-md-end">goose-2</p>
+        <p class="text-lg-end">goose-3</p>
+        <p class="text-xl-end">goose-4</p>
+
+        <!-- 20. 當文字溢出時，使用「…」來表達：.text-truncate -->
+
+<hr>
+
+<!-- 文字必須要溢出 才會有...
+要嘛縮小寬度 要嘛新增內容 或是兩者同時 -->
+<p class="text-truncate bg-info" 
+style="width: 50px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente, expedita!</p>
+
+        <!-- 30. 文字大小寫 -->
+        <!--     .text-lowercase | .text-uppercase | .text-capitalize -->
+
+        <hr>
+        <p class="text-lowercase">AppLE</p>
+        <p class="text-uppercase">AppLE</p>
+        <p class="text-capitalize">appLE gay</p>
+
+
+
+        <!-- 40. 文字外觀-->
+        <!--     .fs-1 |  .fw-bold  | .fst-italic -->
+        <p class="fs-1">.fs-1 text</p>
+        <p class="fs-2">.fs-2 text</p>
+        <p class="fs-3">.fs-3 text</p>
+        <p class="fs-4">.fs-4 text</p>
+        <p class="fs-5">.fs-5 text</p>
+        <p class="fs-6">.fs-6 text</p>
+
+
+        <p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-semibold">Semibold weight text.</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>
+
+    </div>
+
+</body>
+
+</html>

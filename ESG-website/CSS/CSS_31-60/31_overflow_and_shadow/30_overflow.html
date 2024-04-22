@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>overflow</title>
+    
+    <style>
+        div {
+            border: 5px solid black;
+            width: 400px;
+            height: 100px;
+        }
+        /*固定區塊內容 可能會溢出 透過overflow 解決溢出問題*/
+        #div1{
+            /* 試試看，overflow屬性的四種值會有那些不同效果? 
+               visible不變化、hidden、scroll、auto */
+            overflow: auto;
+            /*hidden 將溢出內容藏起來
+            scroll 水平與垂直內容變成卷軸可拉動
+            auto 有溢出的方向內容才會有卷軸可以拉動*/
+        }
+
+        /* 實驗: 英文和數字 */
+        .c1{
+            overflow-inline: hidden;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <h3>來東京冒險吧！٩(｡・ω・｡)و 航海王史上首創大型主題樂園！！ </h3>
+        草帽一行人的地盤在東京的象徵‧東京鐵塔！ 僅在此才可以體驗的遊樂設施 觀賞現場娛樂表演、享受美食的餐廳和購買限定商品的商店等‧‧
+        草帽一行人為您準備了很多的冒險，等待您的光臨！！
+    </div>
+
+    <!-- 實驗: 英文和數字 -->
+    <hr>
+    <div class="c1">
+        012345678901234567890123456789012345678901234567890123456789
+    </div>
+    <hr>
+    <div class="c1">
+        qazwsxedcrfvtgbyhnujmikwerdsgdiashdusidhakndwdndkwheQUWQacqf
+    </div>
+</body>
+
+</html>

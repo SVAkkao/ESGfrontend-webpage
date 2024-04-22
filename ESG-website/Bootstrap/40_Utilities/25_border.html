@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+
+    <style>
+        .box {
+            height: 10vh;
+        }
+
+        .box>div {
+            display: inline-block;
+        }
+
+        div[class*='rounded'] {
+            width: 150px;
+        }
+
+        /*span試航內元素 寬高郵內容決定
+        因此需要用display給釘成區塊*/
+        span[class^="border"]{
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+            /* background-color: lightgray;
+            border-color: red; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a href="https://getbootstrap.com/docs/5.2/utilities/borders/">https://getbootstrap.com/docs/5.2/utilities/borders/</a></p>
+        <hr>
+
+        <!-- 10. 為什麼這樣設定div不會出現?
+        元素不能出現大多數原因為沒有內容
+    沒有內容 寬度、高度以及背景顏色是必要的
+高度失效是因為父元素沒有明確的高度 所以h-100失效 -->
+        <div class="w-25 h-100 bg-success">445</div>
+
+        <!-- 20. 複製貼上官網的範例，為什麼 border 測試不出來 -->
+        <span class="border"></span>
+        <span class="border-top"></span>
+        <span class="border-end"></span>
+        <span class="border-bottom"></span>
+        <span class="border-start"></span>
+        <!-- 21. 設定不同的邊線顏色 -->
+<hr>
+
+        <span class="border border-danger"></span>
+
+        <!-- 23. 調整 border 的寬度： border-N -->
+
+        <span class="border border-1"></span>
+        <span class="border border-2"></span>
+        <span class="border border-3"></span>
+        <span class="border border-4"></span>
+        <span class="border border-5"></span>
+
+        <!-- 25. 設定邊框圓角 -->
+        <!--     .rounded-top    | .rounded-bottom  -->
+        <!--     .rounded-start  | .rounded-end     -->
+        <!--     .rounded-circle | .rounded-pill   -->
+<hr>
+        <div class="box">
+            <div class="rounded-top h-100 bg-info"></div>
+            <div class="rounded-bottom h-100 bg-info"></div>
+            <div class="rounded-start h-100 bg-info"></div>
+            <div class="rounded-end h-100 bg-info"></div>
+            <div class="rounded-circle h-100 bg-info"></div>
+            <div class="rounded-pill h-100 bg-info"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

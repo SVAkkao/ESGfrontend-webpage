@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* Child Selector (子選擇器)(>) */
+        div>div {
+            background-color: lightblue;
+        }
+
+        /* Descendant Selector (子孫選擇器)(space)
+        下面的範例便是div(父親)底下所有的h1(子孫) 所有該子元素都會被選擇
+        都會被選擇到 */
+        /* div h1{ background-color: lightgreen;} */
+
+        /* Adjacent Sibling Selector
+        0 (相鄰兄弟選擇器)(+) 兄弟為同一層
+        一旦中間隔了其他元素 便無法被選相鄰兄弟所選擇 */
+        div+h1{background-color: lightcoral;}
+
+        /* General Sibling Selector 
+        (全體兄弟選擇器)(~) 全體兄弟被選擇
+        所有的兄弟都會被選擇，不管有沒有被隔開 */
+        div~h1{background-color: yellow;}
+    </style>
+
+</head>
+
+<body>
+
+    div是爸爸
+    <div>
+        <p>私生子</p>
+        <div><p>兒子-1</p>
+            <div><span>兒孫-1</span></div>
+    </div>
+        
+        <section>
+            <h1>孫子</h1>
+            <section>
+                <h1>曾孫</h1>
+            </section>
+        </section>
+        <div>兒子-2</div>
+    </div>
+    <!-- <p>隔壁鄰居-2</p> -->
+    <h1>伯父</h1>
+    <h1>叔叔</h1>
+    <p>隔壁鄰居-1</p>
+
+</body>
+
+</html>

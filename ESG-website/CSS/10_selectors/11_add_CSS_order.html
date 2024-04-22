@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 試試看，更換 10_add_CSS.html 裡 
+         External 和 Internal 的撰寫順序，並比較結果 -->
+<style>
+    p{
+        color: red;
+        background-color: aqua;
+    }
+</style>
+
+    <!-- 試試看，在 <style> => p 
+         新增屬性 background-color: aqua; -->
+         <link rel="stylesheet" href="./style.css">
+        </head>
+
+    <!-- 在head css東西放的後面 會蓋掉前面
+    因此，後面宣告的樣式會覆蓋前面
+同時，只有相同的樣式(例如都是color)會互相影響
+不同的樣式(background)不會被覆蓋 -->
+<body>
+
+    <p>Apple</p>
+    
+</body>
+
+</html>

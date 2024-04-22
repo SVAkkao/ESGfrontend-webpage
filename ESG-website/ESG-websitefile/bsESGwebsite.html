@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG網站</title>
+
+    <link rel="stylesheet" href="../Bootstrap/_css/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/CSS_31-60/60_animation/css/loading.css">
+    <link rel="stylesheet" href="../CSS/CSS_31-60/60_animation/css/animate.css">
+    
+
+    <script src="../Bootstrap/_js/popper.min.js"></script>
+    <script src="../Bootstrap/_js/bootstrap.bundle.js"></script>
+
+    <style>
+
+/*導覽列的CSS--------------------------------*/
+        .topiconl {
+            background-image: url(./img1/planet-earth.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 80px;
+
+
+        }
+
+        nav,nav button {
+                color: white !important;
+                font-weight: bold !important; 
+            }
+
+
+        @media screen and (max-width:768px) {
+
+            nav,
+            nav button {
+                
+                white-space: nowrap;
+                font-size: 12px !important;
+            }
+
+            .topiconl{
+                width: 60px;
+            }
+        }
+/*導覽列的CSS--------------------------------*/
+
+/*以下是移動特效------------------------*/
+.coolb{
+    text-decoration: none; 
+    position: relative;
+    white-space: nowrap;
+    color: black;
+}
+
+.coolb:before{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: rgb(76, 153, 76);
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform .3s ease;
+        }
+
+        .bkc:hover{
+            color: rgb(2, 138, 2);
+            background-color: rgb(189, 233, 189);
+        }
+
+        .topiconl:hover{
+            scale: 105%;
+        }
+
+        .coolb:hover::before{
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+/*-----------------------------------------------*/
+
+
+        #hero {
+            width: 100%;
+
+            background: url("https://www.youtube.com/watch?v=3vD1AX6q0UE&ab_channel=%E8%B2%9D%E6%AE%BC%E6%94%BE%E5%A4%A7BACKER-FOUNDER") top center;
+            background-size: cover;
+
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <header>
+
+
+        <nav class="container-fluid d-flex fixed-top ">
+            <div class="container-fluid d-flex btn-group">
+
+                <a class="topiconl me-auto coolb bkc" href="#"></a>
+                <div class="p-3 dropdown">
+                    <button class="btn coolb bkc" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        永續經營
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">國際承諾</a></li>
+                        <li><a class="dropdown-item" href="#">關鍵永續績效</a></li>
+
+                    </ul>
+                </div>
+                <div class="p-3 dropdown">
+                    <button class="btn coolb bkc" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        供應鏈
+                    </button>
+                </div>
+                <div class="p-3 dropdown">
+                    <button class="btn coolb bkc" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        新聞影音
+                    </button>
+                </div>
+                <div class="p-3 dropdown">
+                    <button class="btn coolb bkc" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        下載專區
+                    </button>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+
+
+    </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center border">
+        <video autoplay muted loop id="myVideo" class="w-100">
+            <source src="./video/One Earth - Environmental Short Film - Trim.mp4" type="video/mp4">
+        </video>
+        <div class="container text-white position-absolute" data-aos="fade-up" data-aos-delay="500">
+            <h1>為更美好的未來努力</h1>
+            <h2>關心地球，關心每一位地球居民</h2>
+
+        </div>
+    </section><!-- End Hero -->
+
+    <div class="animate__slideInRight" style="animation-duration:1s">
+        <!-- 20.使用 Animate.css 的樣式 -->
+        <!-- <img src="../../img/offline_squat.png" class="animate__animated animate__slideOutRight" > -->
+        <!-- 30.使用 Loading.css 的樣式 -->
+        <div id="textdeco" class="fs-3 bg-success text-center text-white">
+            讓我一起向最好的未來看齊  🠗 🠗 🠗
+        </div>
+        
+
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+
+
+</body>
+
+</html>

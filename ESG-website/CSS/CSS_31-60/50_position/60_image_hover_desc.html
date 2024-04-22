@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 參照 60_image_hover_desc.png，請試著加入 css，讓文字在滑鼠經過時才顯示  */
+
+        /*文字要有透明框  蓋在圖片上 當滑鼠經過時才有*/
+
+    figure{
+        
+        position: relative;
+    }
+
+    img{
+        width: 1000px;
+    }
+
+    figcaption{
+        visibility: hidden;
+    }
+/*兄弟選擇棄  寬度圖片與文字要調整成一致
+背景顏色透明度 rgba */
+img:hover+figcaption{
+        font-size: 500%;
+        position: absolute;
+        bottom: 30%;
+        background-color:rgba(15, 30, 238, 0.5);
+        /*不使用opacity原因為文字也會一起透明*/
+        text-align: center;
+        width: 1000px;
+        visibility: visible;
+        padding: 30px;
+        box-sizing: border-box;
+        /*將寬度放在預定地值*/
+    }
+        
+    </style>
+</head>
+
+<body>
+<br><br>
+    <figure>
+        <img src="../../img/sunny.JPG">
+        <figcaption class="desc">千陽號海上行</figcaption>
+    </figure>
+
+</body>
+
+</html>

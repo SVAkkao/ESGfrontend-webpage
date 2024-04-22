@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>val()</title>
+
+    <style>
+        /* 10. 在 html 中設定 --apple: green;  觀察畫面的變化
+        */
+        html {
+            --apple: green;
+        }
+
+        /* 20. 取得在 html 中設定的變數值 */
+        /*    選擇 h5 標籤 設定 color: var(--apple); 觀察畫面的變化
+        利用var將之前所設定的變數拿出來用 */
+        h5{
+            color: var(--apple);
+        }
+
+        /*html是整粉文件 因此整份文件都能使用
+        但h6不含蓋在h4的範圍內
+        如果是在h4的範圍內用變數便會改變
+        因此變數通常會在html範圍內進行宣告
+        :root也是html元素 但:root的層級會更高
+        (虛擬元素)
+        */
+        /*body div  span都可以 但就是p h系列不行 系統有些錯亂(span應該不行才對)
+        變數大部分放置的位置，
+        會在html裡(實際大多會用權線更高的:root<之後的blueshape也是>)*/
+        div{
+            --bee: orange;
+        }
+
+        h6{
+            color: var(--bee);
+        }
+
+    </style>
+</head>
+
+<body>
+    <h4>在 CSS 中使用變數</h4>
+    <p> a. 使用 -- 宣告</p>
+    <p> b. 透過 var function 取得變數值</p>
+    <hr>
+    <h4> h4 測試顏色設定 </h4>
+    <h5> h5 測試顏色設定 </h5>
+    <div><h6> h6 測試顏色設定 </h6></div>
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>橫向滑動特效</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /*這裡決定整個畫面的大小*/
+        #pinContainer {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            /* margin-top: 30vh; */
+            height: 80vh;
+            
+            -webkit-perspective: 1000;
+            perspective: 1000;
+        }
+
+        /*這裡決定開始華的時候的樣子*/
+        #slideContainer {
+            /*width 400% 是為了有四個寬度100%的頁面 可以增減*/
+            width: 400%;
+            height: 100%;
+            position: absolute;
+            margin-top: 10vh;
+        }
+
+        .page1,
+        .page2,
+        .page3,
+        .page4 {
+            height: 100%;
+            width: 25%;
+            position: absolute;
+            top: 0;
+        }
+
+        .page1 {
+            background-color: #FF2266;
+        }
+
+        .page2 {
+            background-color: #FFD233;
+            left: 25%;
+        }
+
+        .page3 {
+            background-color: #DDECCC;
+            left: 50%;
+        }
+
+        .page4 {
+            background-color: #DEFF22;
+            left: 75%;
+
+        }
+
+        section {
+            padding: 30px;
+            box-sizing: border-box;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+<!-- 橫條撥放 -->
+
+    <div id="pinContainer">
+        <div id="slideContainer">
+            <section class="page1">
+                <b>Page one</b>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo malesuada nisl, vitae mollis
+                    nulla rutrum non. Vestibulum ullamcorper libero at felis varius dapibus. Aenean ornare dui sed
+                    accumsan gravida. In vitae facilisis dolor. Pellentesque placerat interdum turpis, vel rutrum felis
+                    bibendum non. Ut quis urna dui. Donec facilisis urna sed rhoncus auctor. Cum sociis natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam a lacinia odio.</p>
+            </section>
+            <section class="page2">
+                <b>Page two</b>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vitae facilisis dolor. Pellentesque
+                    placerat interdum turpis, vel rutrum felis bibendum non. Ut quis urna dui. Donec facilisis urna sed
+                    rhoncus auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Nullam a lacinia odio.</p>
+            </section>
+            <section class="page3">
+                <b>Page three</b>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo malesuada nisl, vitae mollis
+                    nulla rutrum non. Vestibulum ullamcorper libero at felis varius dapibus. Aenean ornare dui sed
+                    accumsan gravida. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Nullam a lacinia odio.</p>
+            </section>
+            <section class="page4">
+                <b>Page four</b>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo malesuada nisl, vitae mollis
+                    nulla rutrum non. Vestibulum ullamcorper libero at felis varius dapibus. Aenean ornare dui sed
+                    accumsan gravida. In vitae facilisis dolor. Pellentesque placerat interdum turpis, vel rutrum felis
+                    bibendum non. Ut quis urna dui. Donec facilisis urna sed rhoncus auctor. Cum sociis natoque
+                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam a lacinia odio.</p>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <!-- 一定要有下面這個我修改過的本機檔案 不然會有浮水-->
+    <script src="./debug.addIndicators.js"></script>
+
+
+
+
+
+
+    <script>
+
+
+        $(function () {
+            var controller = new ScrollMagic.Controller();
+            var slides = new TimelineMax()
+
+                .to("#slideContainer", 0.5, { z: -150 })
+                .to("#slideContainer", 1, { x: "-25%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+                .to("#slideContainer", 0.5, { z: -150, delay: 1 })
+                .to("#slideContainer", 1, { x: "-50%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+                .to("#slideContainer", 0.5, { z: -150, delay: 1 })
+                .to("#slideContainer", 1, { x: "-75%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+
+            var scene = new ScrollMagic.Scene({
+                triggerElement: "#pinContainer",
+                triggerHook: "onLeave",
+                duration: "400%",
+                markers: false,
+            })
+                .setPin("#pinContainer")
+                .setTween(slides)
+                .addIndicators()
+                .addTo(controller);
+        });
+
+        scene.removeTween(true)
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

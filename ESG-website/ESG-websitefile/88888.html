@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        p{
+            visibility: hidden;
+        }
+
+        div:hover>p{
+            visibility: visible;
+        }
+
+        div>div{
+            
+            display: inline-block;
+        }
+
+        .demo{
+            display: fle;
+        }
+
+        div>p:hover~img{
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    
+<div>apple
+    <p>cat</p>
+</div>
+
+<div class="demo">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+</div>
+
+<div>
+    <p>第一個段落</p>
+    <p>第一個段落</p>
+    <p>第一個段落</p>
+    <img src="./img1/planet-earth.png" alt="">
+</div>
+
+</body>
+</html>

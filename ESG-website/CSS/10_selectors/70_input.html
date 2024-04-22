@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 10. 改變滑鼠經過 radio 的樣式 */
+        input[type="radio"] {
+            cursor: pointer;
+        }
+
+        /* 20. :valid 驗證通過時的樣式設定 */
+        input[type="email"]:valid,
+        input[type="text"]:valid,
+        input[type="tel"]:valid {
+            background-color: lightgreen;
+        }
+
+        /* 21. :invalid 驗證不通過時的樣式設定 */
+        input[type="email"]:focus:invalid,
+        input[type="text"]:focus:invalid,
+        input[type="tel"]:focus:invalid {
+            background-color: lightpink;
+        }
+
+        /* 30. 驗證通過時 輸入框後面顯示 ✓ */
+        input[type="email"]:valid+span::after,
+        input[type="text"]:valid+span::after,
+        input[type="tel"]:valid+span::after
+        {
+            content: "✓";
+            color: green;
+
+        }
+
+        /* 31. 驗證不通過時 輸入框後面顯示 ✖ */
+        input[type="email"]:focus:invalid+span::after,
+        input[type="text"]:focus:invalid+span::after,
+        input[type="tel"]:focus:invalid+span::after
+        {
+            content: "✖";
+            color: red;
+
+        }
+
+
+        /* 40. 設定取得焦點的背景顏色greenyellow */
+        /* input[type="email"]:focus{
+            background-color: white;
+        }
+
+        input[type="email"]:focus+span::after{
+            color: white;
+        } */
+
+        /* 41. 設定勾選時 label 顏色 blue */
+        input[type="checkbox"]:checked+label{
+            color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <p><a href="https://www.w3schools.com/cssref/trysel.asp">Try CSS Selector</a></p>
+    <p><a href="https://caniuse.com/">Can I use.. 可以查這個屬性哪些瀏覽器支援</a></p>
+    <p><a href="https://flukeout.github.io/">CSS Diner (選擇器的小遊戲)</a></p>
+    <hr>
+
+    <form>
+        <!-- 照上方CSS設定 -->
+        <!-- 10. 產生 單選按鈕元素 -->
+        <input type="radio">
+        <br>
+
+        <!-- 20. 產生 email 輸入框 以及 -->
+        email:<input type="email" required>
+        <span></span><br>
+        <!--     產生 文字輸入框，並限制只能輸入大小寫英文 以及 -->
+        地址:<input type="text" pattern="[A-Za-z]{0,}" required>
+        <span></span><br>
+        <!--     產生 電話的輸入框，並限制為台灣手機號碼格式 以及 -->
+        tel:<input type="tel" pattern="[0-9]{10}" required>
+        <span></span>
+        <!--     產生 文字輸入框，並限制輸入身分證字號格式 -->
+        <br>
+        ID: <input type="text" pattern="[A-Z]{1}[0-9]{9}" required>
+        <span></span>
+        <br>
+        <input type="checkbox" id="ag"><label for="ag">同意</label>
+    </form>
+</body>
+
+</html>

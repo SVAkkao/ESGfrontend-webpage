@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* exmaple 01. */
+        #div_A {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: example;
+            animation-duration: 5s;
+            /*animation 一定要有name與duration才能夠撥放*/
+        }
+
+        @keyframes example
+
+        /*example式自訂的動畫名稱*/
+            {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        /* example 02. */
+        #div_B {
+            width: 100%;
+            height: 65%;
+            background-color: white;
+            margin-top: 8%;
+            animation-name: ass;
+            animation-duration: 15s;
+            /*animation-iteration-count
+            動畫播放次數 幾次就寫數字 無限循環就是infinite*/
+            animation-iteration-count: 2;
+
+        }
+
+        @keyframes ass {
+            /* 0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: blue;
+            }
+
+            50% {
+                background-color: yellow;
+            }
+
+            75% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: red;
+            } */
+
+            0% { transform: translateX(10%) scale(1); }
+  100% { transform: translateX(200%) scale(1); }  
+
+
+
+        }
+
+        .fff{
+            background-image: url(../../../小專/img1/碳中和路徑圖.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: block;
+            height: 450px;
+            width: 100%;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="div_A"></div>
+    <div class="fff"><div id="div_B"></div></div>
+    
+</body>
+
+</html>

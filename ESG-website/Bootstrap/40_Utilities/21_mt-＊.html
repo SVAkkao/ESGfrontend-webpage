@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+
+    <style>
+        /* margin崩塌條件: */
+        /* 1. 父元素與子元素都是display:block */
+        /* 2. 在"第一個"子元素放入margin */
+        /* 2. 並在第一個子元素放入margin-top 或在最後一個子元素加入margin-bottom */
+        div>div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box {
+            background-color: lightcoral;
+
+            /* 20. 外層容器加入 padding 
+            margin top 的崩塌只有 
+            padding top 才能解決
+            同理margin-bottom的崩塌只有
+            padding top 才能解決*/
+            /* padding-top: 1px; */
+
+            padding-bottom: 1px;
+
+            /* 21. 外層容器加入 border
+            加上了border也能處理該問題*/
+            /* border: 1px solid lightcoral; */
+        }
+
+        .mydiv {
+            background-color: lightgreen;
+
+            /* 22. 改變為  display: inline-block; */
+            /* display: inline-block; */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 10. 試試看，在 .box> div 加入 margin-top 樣式 -->
+    <div class="box">
+        <div class="mydiv">A</div>
+        <!-- 放在第二個子元素的margin top 不會崩塌喔
+        padding也能有效避免崩塌 -->
+        <div class="mydiv" style="margin-bottom: 50px;">C</div>
+    </div>
+
+    <hr>
+
+    <div class="box">
+        <div class="mydiv">B</div>
+    </div>
+
+</body>
+
+</html>

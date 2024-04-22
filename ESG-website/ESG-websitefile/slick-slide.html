@@ -1,0 +1,80 @@
+<!-- slick-slide引用 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+<!-- CSS -->
+<style>
+.color1 {
+    z-index: 5000;
+    background-color: var(--logoColor);
+    width: 100%;
+    /* height: 250px; */
+    transform: translateZ(-1px);
+    padding: 1%;
+}
+
+.slick-slide {
+    width: 80vw;
+    height: 20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 8000;
+    padding-right: 1%;
+    transform: translateZ(-1px);
+}
+</style>
+<!-- HTML -->
+<div class="slick-container color1">
+    <div class="slick-wrapper" style="margin: 0 -80px;">
+        <img class="slick-slide" src='./img/to_08.jpg'></img>
+        <img class="slick-slide" src='./img/to_09.jpg'></img>
+        <img class="slick-slide" src='./img/to_10.jpg'></img>
+        <img class="slick-slide" src='./img/to_11.jpg'></img>
+        <img class="slick-slide" src='./img/to_12.jpg'></img>
+        <img class="slick-slide" src='./img/to_13.jpg'></img>
+        <img class="slick-slide" src='./img/to_14.jpg'></img>
+        <img class="slick-slide" src='./img/to_15.jpg'></img>
+        <img class="slick-slide" src='./img/to_16.jpg'></img>
+        <img class="slick-slide" src='./img/to_17.jpg'></img>
+    </div>
+</div>
+<!-- JS -->
+<script>
+    $('.slick-wrapper').slick({
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        speed: 4000,
+        autoplaySpeed: 0,
+        slidesToShow: 5,
+        touchMove: false,
+        arrows: false,
+        cssEase: 'linear',
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }]
+    });
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <!--Popovers rely on the third party
+         library Popper for positioning. You must include popper.min.js
+          before bootstrap.js, or use one bootstrap.bundle.min.js which
+           contains Popper.
+        JS也有引用順序的問題 一旦順序錯誤引用就會失敗 尤其是 bootstrap
+    的JS檔案
+以下例子 popper必須在bootstrap之前 否則無法執行 -->
+    <script src="../_js/popper.min.js"></script>
+    <script src="../_js/bootstrap.min.js"></script>
+</head>
+<body>
+    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+</body>
+</html>

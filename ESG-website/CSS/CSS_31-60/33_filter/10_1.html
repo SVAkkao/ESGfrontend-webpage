@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*限制圖片大小*/
+        img {
+            width: 300px;
+        }
+
+        input,
+        label{
+            margin: 10px 5px;
+        }
+        
+        /*將單選選項被選擇時，同樣選取img圖片並改變該圖片*/
+        /*屬性選擇棄*/
+        input[id="f1"]:checked~img{
+            filter: blur(45px);
+        }
+        /*ID*/
+        #f2:checked~img{
+             filter: brightness(300%);
+        }
+        #f3:checked~img{
+            filter: contrast(50%);
+        }
+        
+    </style>
+
+</head>
+
+<body>
+<!-- 單選選項 name變成單選 id供區別 label讓字可以點 -->
+    <input type="radio" name="pic" id="f1"><label for="f1">blur</label>
+    <br>
+    <input type="radio" name="pic" id="f2"><label for="f2">brightness</label>
+    <br>
+    <input type="radio" name="pic" id="f3"><label for="f3">contrast</label>
+    <br>
+<!-- 圖片 -->
+    <img src="../../img/sunny.jpg">
+</body>
+
+</html>

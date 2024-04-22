@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        /* 10. 來自 Google Fonts：Comic Neue */
+        /*      透過 @import 取得字型 */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+        
+        /* 11. 使用 'Comic Neue' 設定 #title2 的字型 */
+        #title2{
+            font-family: 'Comic Neue', cursive;  /*若找不到想要的會用
+            cursive代替(CSS fonts)有紀錄其他字形*/
+        }
+        
+
+        /* 20. 來自 Font Squirrel：Alex Brush*/
+        /*      自己的字形黨透過 @font-face 設定字型
+        用font family設定名稱 src給予檔案路徑 */
+        @font-face {
+            font-family: "Alex Brush";
+            src: url("./alex-brush/AlexBrush-Regular.ttf");
+        }
+
+
+        /* 21. 使用 'Alex Brush' 設定 #title3 的字型 */
+        
+        #title3{
+            font-family: "Alex Brush";
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- CSS通用字形 -->
+    <p><a href="https://www.w3schools.com/css/css_font.asp">CSS Fonts</a></p>
+    
+    <p><a href="https://www.w3schools.com/css/css3_fonts.asp">CSS Web Fonts</a></p>
+    <!-- google字形 -->
+    <p><a href="https://fonts.google.com/">Google Fonts</a></p>
+    <!-- 下載字形 -->
+    <p><a href="https://www.fontsquirrel.com/">Font Squirrel</a></p>
+    <hr>
+
+    <h1 id="title1">ABCDEFGHIJKLMNOPQRSTUVWXYZ </h1>
+    <h1 id="title2">ABCDEFGHIJKLMNOPQRSTUVWXYZ </h1>
+    <h1 id="title3">ABCDEFGHIJKLMNOPQRSTUVWXYZ <br> Manipulate </h1>
+
+</body>
+
+</html>

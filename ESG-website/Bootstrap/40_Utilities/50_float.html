@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h4>官方網站</h4>
+        <p><a href="https://getbootstrap.com/docs/5.2/utilities/float/">https://getbootstrap.com/docs/5.2/utilities/float/</a></p>
+        <h4>Bootstrap Utilities> 頁面上搜尋 Float and Clearfix</h4>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_utilities.php">https://www.w3schools.com/bootstrap5/bootstrap_utilities.php</a></p>
+
+        <hr>
+       
+        <!-- 10. 透過 .float-start 和 .float-end 設定元素位置 -->
+
+        <!-- 20. 透過在外層容器加入 .clearfix 清除掉浮動效果 -->
+
+
+        <div class="bg-info clearfix">
+            <div class="bg-danger p-3 float-end">A</div>
+            <div class="bg-success p-3 float-end">B</div>
+        </div>
+<!-- 會B前A後是因為 A先漂過去到最左邊 B才漂過去
+所以AB位置會調換  -->
+
+
+<!-- 左右移動 父元素不見了
+DIV是袋子 A B子元素是氣球 飛走了
+因此DIV便沒有了元素內容 因此變成空白(空袋子)) -->
+<div class="bg-info clearfix">
+    <div class="bg-danger p-3 float-start">A</div>
+    <div class="bg-success p-3 float-end">B</div>
+</div>
+
+<!-- float 會攪再一起 包含之前的float還是hr等其他內容
+透過.clearfix AB漂浮的範圍便會變限制住 並且
+讓父元素的空間被保留  這樣財部會讓float去影響到其他元素-->
+
+<hr>
+<div class="bg-info clearfix">
+    <div class="bg-warning p-3 float-start">C</div>
+    <div class="bg-primary p-3 float-end">D</div>
+</div>
+<hr>
+
+    </div>
+
+</body>
+
+</html>

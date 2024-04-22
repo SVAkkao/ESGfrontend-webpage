@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0104</title>
+    <style>
+        .header1 {
+
+            /* background-color: lightgreen; */
+            position: fixed;
+            width: 100%;
+            height: 66px;
+
+
+
+        }
+
+        .topicon {
+            position: absolute;
+            background-image: url("./img1/planet-earth.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-color: transparent;
+            width: 100px;
+            height: 66px;
+
+        }
+
+        .topicon2 {
+            position: absolute;
+            top: 0px;
+            height: 20px;
+            padding: 20px;
+            right: 0px;
+            text-decoration: none;
+
+
+        }
+
+        .topicon3{
+            position: relative;
+        }
+
+        .nav {
+            text-decoration: none;
+            color: black;
+            /* background-color: red; */
+            /* width: 100px;
+            height: 100px; */
+            /* display: block; */
+            padding: 20px;
+            font-size: 20px;
+            position: relative;
+            /* float: right; */
+            /* border: 1px solid red; */
+
+
+        }
+
+        .headlist {
+            position: absolute;
+            right: 80px;
+            /* top: 0px; */
+            /* border: solid black; */
+            display: inline flex;
+            list-style: none;
+
+        }
+
+        .nav::before,
+        .topicon3::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: rgb(76, 153, 76);
+            transform-origin: bottom right;
+            transform: scaleX(0);
+            transition: transform .3s ease;
+        }
+
+        .nav:hover,
+        .topicon3:hover {
+            color: rgb(2, 138, 2);
+            background-color: rgb(189, 233, 189);
+            /* border-bottom: 3px solid rgb(76, 153, 76); */
+
+        }
+
+
+        .nav:hover::before,
+        .topicon3:hover::before {
+            transform-origin: bottom left;
+            transform: scaleX(1);
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="header1">
+            <a href="https://www.fpg.com.tw/esg/tw">
+                <div class="topicon"></div>
+            </a>
+            <ul type:none class="headlist">
+                <li>
+                    <div class="nav dropdown">
+
+                    </div>
+                </li>
+                <li><a class="nav" href="">供應鏈</a></li>
+                <li><a class="nav" href="">新聞影音</a></li>
+                <li><a class="nav" href="">下載專區</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li><div><a href="https://www.fpg.com.tw/esg/tw/search"><img  class="topicon2 topicon3" src="./img1/target.png"></a>
+                </div></li>
+            </ul>
+
+
+
+        </nav>
+
+
+    </header>
+
+    <main>
+        <video src=""></video>
+    </main>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <!-- <video src="../小專/video/sayhi.mp4" autoplay loop muted></video> -->
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.storeage{
+    height: 500px;
+    width: 100%;
+    border: 3px solid green
+}
+
+.shopf{
+    height: 300px;
+    width: 100%;
+    background-color: aqua;
+    border: 3px solid red;
+}
+
+.shopson{
+    height: 100%;
+    border: 3px solid green;
+}
+
+.inputbox{
+height: 35px;
+width: 35px;
+}

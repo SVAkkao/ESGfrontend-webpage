@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <link rel="stylesheet" href="../_css/bootstrap.css">
+    <script src="../_js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h4>官方網站</h4>
+        <p><a href="https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content">https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content</a></p>
+        <h4>Bootstrap Flex - Responsive Flex Classes (在最底下)</h4>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_flex.php">https://www.w3schools.com/bootstrap5/bootstrap_flex.php</a> </p>
+        <hr>
+
+        <!-- 複製35號檔案 -->
+
+        <hr>
+        <h3>.flex-column-reverse</h3>
+        <div class="p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <!-- ** 請比較下列四種class ** -->
+
+        <!-- 10. .justify-content各種"水平"對齊
+            可以加入斷點 .justify-md-content
+         <div class="d-flex justify-content-start">...</div>
+<div class="d-flex justify-content-end">...</div>
+<div class="d-flex justify-content-center">...</div>
+<div class="d-flex justify-content-between">...</div>
+<div class="d-flex justify-content-around">...</div>
+<div class="d-flex justify-content-evenly">...</div>-->
+        
+        <hr>
+        <h3>.justify-content-center</h3>
+        <div class="d-flex justify-content-center p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+
+        <hr>
+        <h3>.justify-content-start</h3>
+        <div class="d-flex justify-content-start p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+        <hr>
+        <h3>.justify-content-end</h3>
+        <div class="d-flex justify-content-end p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <hr>
+        <h3>.justify-content-between</h3>
+        <div class="d-flex justify-content-between p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <hr>
+        <h3>.justify-content-around</h3>
+        <div class="d-flex justify-content-around p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <hr>
+        <h3>.justify-content-evenly</h3>
+        <div class="d-flex justify-content-evenly p-3 bg-secondary">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <!-- 20. .align-items-* -->
+    <!-- .align-items-center  垂直方向的對其
+        因為是根據父元素垂直高度致中
+        所以要有效果父元素要夠高
+        才看的出來變化 
+    釋迦在父元素!-->
+        <hr>
+        <h3>.align-items-center no height200px</h3>
+        <div class="d-flex align-items-center p-3 bg-secondary"
+             >
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+ 
+        <hr>
+        <h3>no.align-items-center height200px</h3>
+        <div class="d-flex p-3 bg-secondary"
+        style="height: 200px;">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <hr>
+        <h3>.align-items-center height200px</h3>
+        <div class="d-flex align-items-center p-3 bg-secondary"
+             style="height: 200px;">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <!-- 21. .align-self-*  釋迦在特定的子元素!!-->
+        
+        <hr>
+        <h3>.align-self-center height200px</h3>
+        <div class="d-flex p-3 bg-secondary"
+             style="height: 200px;">
+            <div class="p-2 bg-info">item a</div>
+            <div class="align-self-center p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div> 
+
+        <!-- 22. .align-content-* 
+        父元素高度條大一點更顯著
+    將很多子元素垂直致中排列 
+    因為有可能太多 可利用flex-wrap換行 -->
+       
+        <hr>
+        <h3>.align-content-center height200px</h3>
+        <div class="d-flex  align-content-center flex-wrap p-3 bg-secondary"
+             style="height: 300px;">
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+            <div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div><div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div><div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div><div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div><div class="p-2 bg-info">item a</div>
+            <div class="p-2 bg-success">item b</div>
+            <div class="p-2 bg-warning">item c</div>
+        </div>         
+
+
+    </div>
+
+</body>
+
+</html>

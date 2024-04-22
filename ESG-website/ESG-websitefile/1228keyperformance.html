@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關鍵永續績效</title>
+
+
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" href="../CSS/CSS_31-60/60_animation/css/loading.css">
+    <link rel="stylesheet" href="../CSS/CSS_31-60/60_animation/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/1221style.css">
+
+    <script src="../Bootstrap/_js/popper.min.js"></script>
+    <script src="../Bootstrap/_js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="../Jquery/20_0108_jQuery/0108_jQuery/_js/jquery-3.6.0.js"></script>
+
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        #pinContainer {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            /* margin-top: 30vh; */
+            height: 80vh;
+
+            -webkit-perspective: 1000;
+            perspective: 1000;
+        }
+
+        #slideContainer {
+            background-color: rgb(219, 233, 223);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 400%;
+            height: 100%;
+            position: absolute;
+            margin-top: 15vh;
+        }
+
+        .page1,
+        .page2,
+        .page3,
+        .page4 {
+            height: 100%;
+            width: 25%;
+            position: absolute;
+            top: 0;
+        }
+
+        .page1 {
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            color: black;
+        }
+
+        .page1son {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./performenceimg/pexels-lukas-574190.jpg');
+            filter: brightness(75%) blur(2px) opacity(30%);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .page2 {
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 25%;
+        }
+
+        .page2son {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./performenceimg/pexels-daria-obymaha-1683975.jpg');
+            /* filter: brightness(60%) blur(2px) opacity(30%); */
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .page3 {
+
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            left: 50%;
+        }
+
+        .page3son {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./performenceimg/pexels-oleksandr-p-5439046.jpg');
+            filter: brightness(60%) blur(2px) opacity(30%) contrast(80%);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .page4 {
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 75%;
+
+        }
+
+        .page4son {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('./performenceimg/pexels-nathanael-schmer-13287346.jpg');
+
+            filter: brightness(60%) blur(2px) opacity(30%) contrast(80%);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+
+        section[class^="page"] {
+            padding: 30px;
+            box-sizing: border-box;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 頭頂navbar -->
+
+    <header class=" position: relative;">
+
+
+        <nav class="container-fluid d-flex fixed-top" id="navf" style="background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);">
+            <div class="container-fluid d-flex btn-group">
+
+                <a class="topiconl me-auto coolb bkc " href="./1226bsindex.html">
+                    <div class="topiconl me-auto coolb bkc "></div>
+                </a>
+                <div class="p-3 dropdown">
+                    <button class="btn coolb bkc shadow-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        永續經營
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./1227comittment.html">國際承諾</a></li>
+                        <li><a class="dropdown-item" href="./1228keyperformance.html">關鍵永續績效</a></li>
+
+                    </ul>
+                </div>
+                <div class="p-3">
+                    <button class="btn coolb bkc shadow-sm" type="button">
+                        <a class="buttonlink" href="./1231supplychain.html">綠色供應鏈</a>
+                    </button>
+                </div>
+                <div class="p-3">
+                    <button class="btn coolb bkc shadow-sm" type="button">
+                        <a class="buttonlink" href="./0104news.html">新聞影音</a>
+                    </button>
+                </div>
+
+
+
+            </div>
+
+        </nav>
+
+
+
+    </header>
+
+
+
+    <section>
+
+        <div class="bg-success performancehead">
+            <div class="row performanceheadmiddle " style="height: 33%;">
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson1 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover1.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover2.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson2 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover3.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover4.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row performanceheadmiddle " style="height: 33%;">
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson3 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover5.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover6.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson4 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover7.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover8.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row performanceheadmiddle " style="height: 34%;">
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson5 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover9.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover10.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 h-100">
+                    <div class="row performanceheadson6 h-100">
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover11.jpg);"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-danger performanceimg w-100 h-100"
+                                style="background-image: url(./img1/performancecover12.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+    <!-- 吹噓獎項 -->
+
+    <div>
+
+    </div>
+
+    <br><br><br><br>
+    <!-- 吹噓獎項 -->
+
+    <div class="blow1">2024目標計畫達成率</div>
+    <div class="blow2" id="blow2">0</div>
+
+
+    <!-- 吹噓獎項 -->
+
+
+    <!-- 橫條撥放 -->
+
+    <div id="pinContainer">
+        <div id="slideContainer" style="text-align: center;">
+            <section class="page1 middleperformence1">
+                <h2>造林面積已達10000公頃</h2>
+                <br><br><br>
+                <p>本公司矢志於環境保護，已成功實現超過10,000公頃的大規模造林計畫。透過植樹活動，企業積極參與氣候變遷的應對，降低碳排放並改善生態環境。此努力不僅有助於提供氧氣、減緩土地退化，更創造了豐富的生態多樣性。企業對於生態系統的積極投入不僅展現了其環保承諾，更在可持續發展領域樹立了榜樣。透過達成大規模造林面積，本公司為社會和環境帶來了實質的正面影響，成為生態保育和永續發展的引領者。</p>
+                <div class="page1son"></div>
+            </section>
+            <section class="page2">
+                <h2>救治3600名癌症病童</h2>
+                <br><br><br>
+                <p>本公司致力於社會責任，透過合作夥伴和慈善組織，成功救治3600名罹患癌症的兒童。我們提供全面的醫療支持、手術、化療和心理輔導，確保患者得到最佳的治療和照顧。此努力不僅拓展了癌症患童的治療機會，更減輕了家庭的負擔。透過與醫療專業人員的合作，我們持續追求最先進的治療方法，致力於提高癌症患童的康復率。本公司對於改善兒童醫療的承諾不僅體現了企業的社會關懷，更在醫療領域樹立了可持續發展的典範。</p>
+                <div class="page2son"></div>
+            </section>
+            <section class="page3">
+                <h2>員工滿意度97%，並持續精進</h2>
+                <br><br><br>
+                <p>本公司以員工滿意度97%自豪，持續投入於創建良好的工作環境。我們實施了多元的福利計畫、培訓課程及職涯發展機會，以提高員工滿意度並鞏固團隊凝聚力。透過定期反饋調查，公司細心聆聽員工聲音，並即時調整政策以滿足其需求。持續推動溝通透明化，確保員工了解公司發展方向並參與決策。我們致力於建立公平、包容的企業文化，激勵每位員工實現自身潛力。本公司以員工為核心，透過持續改進與投資，確保員工滿意度的持續提升，建構共同成長的企業家庭。                </p>
+                <div class="page3son"></div>
+            </section>
+            <section class="page4">
+                <h2>逐年碳排放降低目標達成率100%</h2>
+                <br><br><br>
+                <p>本公司以自豪宣布逐年碳排放降低目標達成率達100%。我們積極投入綠色能源、能源效能改進和碳中和技術，實現永續發展的同時大幅減少碳足跡。透過定期監測、報告和科技創新，我們不斷優化生產流程，以更環保方式運營企業。公司員工也參與碳減排的培訓和倡議活動，形成全體努力的合力。這一連串的努力不僅達成了碳排放降低目標，更凸顯了本公司對於氣候變遷的承擔，成為業界的永續發展典範。</p>
+                <div class="page4son"></div>
+            </section>
+        </div>
+    </div>
+
+
+    <!-- 一些圖片與績效 -->
+    <div class="row performancebottom1">
+        <div class="col-6 performancebottom11"></div>
+        <div class="col-6 performancebottom11text">
+            <br><br>
+            <h2>每年協助政府回收困難處置廢棄物500噸</h2>
+            <br><br>
+            <h5>本公司每年積極參與政府的困難處置廢棄物回收計畫，已成功協助回收500噸廢棄物。透過先進的分類與回收技術，我們有效地減少了對環境的不良影響，同時推動了可循環資源的再利用。公司投入資源於環保設施，建立了完善的回收體系，以確保廢棄物的合理處置。透過與政府、社區及供應商的合作，本公司致力於實現綠色環保目標，同時為社會營造清潔且可持續的生態環境。这一系列努力體現了公司對環境永續的堅定承諾。</h5>
+        </div>
+    </div>
+
+    <div class="row performancebottom1">
+        
+        <div class="col-6 ">
+            <br><br>
+            <h2>幫助超過500位員工獲取新技能，規劃職涯發展</h2>
+            <br><br>
+            <h5>本公司致力於員工專業成長，已協助超過500位員工取得新技能並制定職涯發展規劃。透過提供多元的培訓課程、專業講座以及學習資源，我們鼓勵員工不斷學習、提升自身競爭力。公司設有職涯發展輔導，協助員工量身打造職業目標並提供發展機會。透過這些努力，我們不僅滿足員工對於專業技能的需求，更強化了組織的整體實力。本公司以人為本，致力於打造促進學習與成長的工作環境，使員工在事業發展中取得更長遠的成功。</h5>
+        </div>
+        <div class="col-6 performancebottom12"></div>
+    </div>
+    <div class="row performancebottom1">
+        <div class="col-6 performancebottom13"></div>
+        <div class="col-6 ">
+            <br><br>
+            <h2>成立植樹基金會，每年種植超過10萬棵樹木</h2>
+            <br><br>
+            <h5>本公司深信環境保護，為此成立植樹基金會，致力於每年種植超過10萬棵樹木。這一項目不僅有助於減緩氣候變遷，還促進生態多樣性與土地保育。我們投入大量資源支持 reforestation 計畫，透過科技和可持續的種植實踐，確保新樹木的成活率。透過植樹基金會，公司與當地社區建立夥伴關係，共同推動環境永續發展。這一系列努力不僅表現了公司對環境的承擔，更強調了我們在全球永續發展中的積極參與與引領地位。            </h5>
+        </div>
+    </div>
+
+    <!-- 一些圖片與績效 -->
+
+    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="row footarea p-5">
+            <div class="col-md-3 col-sm-1"></div>
+            <div class="col-md-3 col-sm-5">
+                <p>聯絡我們: </p>
+                <p>(tel)048988778</p>
+                <p>(email)goodesg@gmail.com</p>
+
+            </div>
+            <div class="col-md-2 col-sm-1">
+
+            </div>
+            <div class="col-md-4 col-sm-5">
+                <p>生生不息ESG顧問公司</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="./debug.addIndicators.js"></script>
+
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+
+    <script>
+
+
+        $(function () {
+            var controller = new ScrollMagic.Controller();
+            var slides = new TimelineMax()
+
+                .to("#slideContainer", 0.5, { z: -150 })
+                .to("#slideContainer", 1, { x: "-25%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+                .to("#slideContainer", 0.5, { z: -150, delay: 1 })
+                .to("#slideContainer", 1, { x: "-50%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+                .to("#slideContainer", 0.5, { z: -150, delay: 1 })
+                .to("#slideContainer", 1, { x: "-75%" })
+                .to("#slideContainer", 0.5, { z: 0 })
+
+
+            var scene = new ScrollMagic.Scene({
+                triggerElement: "#pinContainer",
+                triggerHook: "onLeave",
+                duration: "400%",
+                markers: false,
+            })
+                .setPin("#pinContainer")
+                .setTween(slides)
+                .addIndicators()
+                .addTo(controller);
+        });
+
+        window.onscroll = function () { scrollFunction() };
+
+        var target1 = 100;
+        var interval1
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 && document.body.scrollTop < 215 ||
+                document.documentElement.scrollTop > 200 && document.documentElement.scrollTop < 250) {
+
+                clearInterval(interval1);
+                var number1 = 0;
+                interval1 = setInterval(function () {
+                    $('#blow2').text(number1);
+                    if (number1 >= target1) {
+                        clearInterval(interval1);
+                    }
+                    number1++
+                }, 10);
+            }
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
